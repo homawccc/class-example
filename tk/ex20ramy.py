@@ -1,0 +1,25 @@
+school = "Warren County Community College"
+p1 = print(len(school))
+p2 = print(school[7:13])
+p3 = print(school.index("County"))
+p4 = print(school[-7:])
+p5 = print(school.count("C"))
+p6 = print(school.count (" "))
+for i in school:
+  p7 = print(i)
+for i in school:
+  if i != " ":
+    p8 = print(i)
+schoolnosp = school.replace("", "")  
+p9 = print(schoolnosp)
+p10 = print(list(schoolnosp))
+schoolnosp_list= list(schoolnosp)
+schoolnosp_list.sort()
+p11 = print(schoolnosp_list())
+schoolnosp_list.sort(reverse=True)
+p12= print(schoolnosp_list)
+schoolnosp_list = list(dict.formkeys(schoolnodups))
+p13= print(schoolnodups)
+p14= print("".join(schoolnodups))
+schlchars = "".join(schoolnodups)
+p15= print(len(schoolchars))
