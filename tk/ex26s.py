@@ -1,34 +1,31 @@
-from tkinter import *
+from tkinter import*
+
+def changepurple():
+    lab1.config(bg="purple", text="Purple Label")
+    #lab1.config(text="Purple Label")
 
 m = Tk()
-m.title("Attendees List")
-m.configure(bg="#CCCCEE", padx=20, pady=20)
+m.title("Tkinter Color Labels")
 
-#Name Entry Labels
-lab1 = Label(m, bg="#CCCCEE", pady=6, text="First")
-lab2 = Label(m, bg="#CCCCEE", pady=6, text="Last")
-#spacer labels
-lab3 = Label(m, bg="#CCCCEE")
-lab4 = Label(m, bg="#CCCCEE")
-lab5 = Label(m, bg="#CCCCEE")
-#Entry Fields
-ent1 = Entry(m, font=("none",16))
-ent1 = Entry(m, font=("none",16))
-ent3 = Entry(m, font=("none",16))
-#Buttons
-btn1 = Button(m, padx=6, pady=6, text="Add Another")
-btn2 = Button(m, padx=6, pady=6, text="Insert")
-btn3 = Button(m, padx=6, pady=6, text="Add Attendee")
-#grid output
-lab1.grid(row=0, sticky=W)
-lab2.grid(row=1, sticky=W)
-ent1.grid(row=0, column=1)
-ent2.grid(row=1, column=1)
-lab3.grid(row=2, columnspan=2)
-btn1.grid(row=3, column=0, sticky=W)
-btn2.grid(row=3, column=1, sticky=E)
-lab4.grid(row=4, columnspan=2)
-ent3.grid(row=5, columnspan=2, sticky=E+W)
-lab5.grid(row=5, columnspan=2)
-btn3.grid(row=7, column=1, sticky=E)
+#frame
+fr1 = Frame(m)
+fr2 = Frame(m, pady=16)
+#labels
+lab1 = Label(fr1, text="Red Label", fg="#ffffff", bg="red", width=12, height=6)
+lab2 = Label(fr1, text="Green Label", fg="#ffffff", bg="green", width=12, height=6)
+lab3 = Label(fr1, text="Blue Label", fg="#ffffff", bg="blue", width=12, height=6)
+#buttons
+btn1 = Button(fr2, text="Button1", padx=6, font=("none", 16),command=changepurple)
+btn2 = Button(fr2, text="Button2", padx=6, font=("none", 16))
+btn3 = Button(fr2, text="Button3", padx=6, font=("none", 16))
+#packing
+fr1.pack()
+lab1.pack(side = LEFT, fill=Y)
+lab2.pack(side = LEFT, fill=Y)
+lab3.pack(side = LEFT, fill=Y)
+fr2.pack()
+btn1.pack(side = LEFT)
+btn2.pack(side = LEFT)
+btn3.pack(side = LEFT)
+#mainloop
 m.mainloop()
